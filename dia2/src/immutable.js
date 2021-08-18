@@ -5,10 +5,9 @@ const john = {
   hobbies: ['Surf', 'Design'],
 }
 
-const jane = john
+const jane = {...john, name:'jane'}
+jane.hobbies = [...jane.hobbies, 'MuayThai', 'Programming']
 
-jane.name = 'Jane'
-jane.hobbies.push('MuayThai', 'Programming')
 
 console.log('John:', john)
 console.log('Jane:', jane)

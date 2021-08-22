@@ -61,5 +61,16 @@ function popularLinhas(){
     console.log('Linhas Populadas')
   }
 }
-popularLinhas()
+String.prototype.normalizar = function() {
+  let temp = this.toUpperCase()
+  console.log(temp)
+  return temp
+}
+placaEl.addEventListener('input', (e)=>{
 
+  e.target.value = e.target.value.normalizar()
+  console.log(e.target.value.normalizar())
+})
+
+//setCarsServer()
+popularLinhas()

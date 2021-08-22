@@ -16,6 +16,7 @@ function checkBody (req, res, next) {
 
 function areAllFieldsValid (body) {
   const fields = [body.image, body.brandModel, body.year, body.plate, body.color]
+  console.log(fields)
   return fields.every(field => typeof field !== 'undefined' && field !== '')
 }
 

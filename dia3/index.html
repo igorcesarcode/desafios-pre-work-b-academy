@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css">
-    <title>Dia 3</title>
-  </head>
 
-  <form action="" >
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <title>Dia 3</title>
+</head>
+
+<body>
+  <form action="">
     <label for="fname">Primeiro nome:</label><br>
     <input data-js="textname" type="text" id="fname" name="fname" value=""><br>
 
@@ -26,37 +28,37 @@
   </form>
 
 
-    <div id="cordiv" data-js="cordiv"></div>
+  <div id="cordiv" data-js="cordiv"></div>
 
 
-<br>
-<br>
+  <br>
+  <br>
 
 
-    <form data-js="formCar">
-      <label for="ulrCar">Url do carro</label><br>
-      <input type="text" data-js="ulrCar" name="ulrCar" value=""><br>
-      <label for="marca">Marca do Carro</label><br>
-      <input type="text" data-js="marca" name="marca" value=""><br>
-      <label for="ano">Ano do Carro</label><br>
-      <input type="number" min="1990" max="2021" data-js="ano" name="ano" value=""><br>
-      <label for="placa">Placa do Carro</label><br>
-      <input type="text" data-js="placa" name="placa" value=""><br>
-      <label for="corcarro">Cor do carro</label><br>
-      <input type="color" data-js="corcarro" value="">
+  <form data-js="formCar">
+    <label for="ulrCar">Url do carro</label><br>
+    <input type="text" data-js="ulrCar" name="ulrCar" value=""><br>
+    <label for="marca">Marca do Carro</label><br>
+    <input type="text" data-js="marca" name="marca" value=""><br>
+    <label for="ano">Ano do Carro</label><br>
+    <input type="number" min="1990" max="2021" data-js="ano" name="ano" value=""><br>
+    <label for="placa">Placa do Carro</label><br>
+    <input type="text" data-js="placa" name="placa" value=""><br>
+    <label for="corcarro">Cor do carro</label><br>
+    <input type="color" data-js="corcarro" value="">
 
 
 
-      <input type="submit" value="Enviar">
-    </form>
+    <input type="submit" value="Enviar">
+  </form>
 
-    <p>Escolha o tipo de carro.</p>
+  <p>Escolha o tipo de carro.</p>
 
 
-    <br>
+  <br>
 
-    <table data-js="tableCar" class="paleBlueRows">
-      <thead>
+  <table data-js="tableCar" class="paleBlueRows">
+    <thead>
       <tr data-js="primeiraLinha">
         <td>Url do carro</td>
         <td>Marca do Carro</td>
@@ -64,10 +66,11 @@
         <td>Marca do Carro</td>
         <td>Cor do carro</td>
       </tr>
-      </thead>
+    </thead>
 
-    </table>
-  <body>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </table>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

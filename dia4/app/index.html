@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dia 4</title>
-  </head>
-  <body>
+<html lang="pt-br">
 
-    <form data-js="formCar">
-      <label for="ulrCar">Url do carro</label><br>
-      <input type="text" data-js="ulrCar" name="ulrCar" value=""><br>
-      <label for="marca">Marca do Carro</label><br>
-      <input type="text" data-js="marca" name="marca" value=""><br>
-      <label for="ano">Ano do Carro</label><br>
-      <input type="number" min="1990" max="2021" data-js="ano" name="ano" value=""><br>
-      <label for="placa">Placa do Carro</label><br>
-      <input type="text" data-js="placa" name="placa" value=""><br>
-      <label for="corcarro">Cor do carro</label><br>
-      <input type="color" data-js="corcarro" value="">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Dia 4</title>
+</head>
 
+<body>
 
-
-      <input type="submit" value="Enviar">
-    </form>
-
-    <p>Escolha o tipo de carro.</p>
+  <form data-js="formCar">
+    <label for="ulrCar">Url do carro</label><br>
+    <input type="text" data-js="ulrCar" name="ulrCar" value=""><br>
+    <label for="marca">Marca do Carro</label><br>
+    <input type="text" data-js="marca" name="marca" value=""><br>
+    <label for="ano">Ano do Carro</label><br>
+    <input type="number" min="1990" max="2021" data-js="ano" name="ano" value=""><br>
+    <label for="placa">Placa do Carro</label><br>
+    <input type="text" data-js="placa" name="placa" value=""><br>
+    <label for="corcarro">Cor do carro</label><br>
+    <input type="color" data-js="corcarro" value="">
 
 
-    <br>
 
-    <table data-js="tableCar" class="paleBlueRows">
-      <thead>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <p>Escolha o tipo de carro.</p>
+
+
+  <br>
+
+  <table data-js="tableCar" class="paleBlueRows">
+    <thead>
       <tr data-js="primeiraLinha">
         <td>Url do carro</td>
         <td>Marca do Carro</td>
@@ -39,11 +42,11 @@
         <td>Marca do Carro</td>
         <td>Cor do carro</td>
       </tr>
-      </thead>
+    </thead>
 
-    </table>
-  <body>
+  </table>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>

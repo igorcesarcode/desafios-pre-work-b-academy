@@ -20,7 +20,6 @@ textoDigitado.addEventListener('input', (e)=>{
 //Exercício 2
 const corSelecionada = document.querySelector('[data-js="coresSelecionada"]')
 const app = document.querySelector('[data-js="cordiv"]')
-console.log(corSelecionada.selectedOptions)
 
 corSelecionada.addEventListener('change', (e) => {
   let dados = [];

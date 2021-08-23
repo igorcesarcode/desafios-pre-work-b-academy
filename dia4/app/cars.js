@@ -1,4 +1,3 @@
-//Exercício 3
 const urlEl = document.querySelector('[data-js="ulrCar"]')
 const marcaEl = document.querySelector('[data-js="marca"]')
 const anoEl = document.querySelector('[data-js="ano"]')
@@ -7,28 +6,15 @@ const corEl = document.querySelector('[data-js="corcarro"]')
 const formCarEl = document.querySelector('[data-js="formCar"]')
 const cartableEl = document.querySelector('[data-js="tableCar"]')
 const primiraLinhaTabelaEl = document.querySelector('[data-js="primeiraLinha"]')
+import { carros } from './main'
 
-const carros = {
-  urls: [],
-  marcas:[],
-  anos:[],
-  placas:[],
-  cors:[],
 
-}
 
-function setCarros(urls,marcas,anos,placas,cors){
-  carros.urls = [...carros.urls,urls]
-  carros.marcas = [...carros.marcas,marcas]
-  carros.anos = [...carros.anos,anos]
-  carros.placas = [...carros.placas,placas]
-  carros.cors = [...carros.cors,cors]
-}
 
 
 formCarEl.addEventListener("submit", function(event){
   event.preventDefault()
-  setCarros(urlEl.value, marcaEl.value, anoEl.value, placaEl.value, corEl.value)
+  setCarsPost(urlEl.value, marcaEl.value, anoEl.value, placaEl.value, corEl.value)
   setFormCarros()
   formCarEl.reset()
   urlEl.focus()
@@ -40,18 +26,19 @@ function setFormCarros(){
 
   let novaLinha = (`
   <tr>
-  <td><img  src="${carros.urls[index]}"></td>
-  <td>${carros.marcas[index]}</td>
-  <td>${carros.anos[index]}</td>
-  <td>${carros.placas[index]}</td>
-  <td style="background-color:${carros.cors[index]};">${carros.cors[index]}</td>
+  <td><img  src="${carros[index].image}"></td>
+  <td>${carros[index].brandModel}</td>
+  <td>${carros[index].year}</td>
+  <td>${carros[index].plate}</td>
+  <td style="background-color:${carros[index].color};">${carros[index].color}</td>
   </tr>`)
   primiraLinhaTabelaEl.insertAdjacentHTML('afterend', novaLinha);
 
 }
 
 function popularLinhas(){
-  let totalDeCarros = carros.urls.length
+  console.log(carros)
+  let totalDeCarros = carros.length
   let totalDeLinhasDeCarros = cartableEl.rows.length-1
 
   if(totalDeLinhasDeCarros<totalDeCarros){
@@ -63,6 +50,7 @@ function popularLinhas(){
 }
 String.prototype.normalizar = function() {
   let temp = this.toUpperCase()
+  temp = temp.replace(/\w{3}\-\d{5}/)
   console.log(temp)
   return temp
 }
@@ -72,5 +60,6 @@ placaEl.addEventListener('input', (e)=>{
   console.log(e.target.value.normalizar())
 })
 
-//setCarsServer()
-popularLinhas()
+
+//popularLinhas()
+

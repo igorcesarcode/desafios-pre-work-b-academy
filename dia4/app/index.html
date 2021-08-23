@@ -16,7 +16,7 @@
       <input type="text" data-js="marca" name="marca" value=""><br>
       <label for="ano">Ano do Carro</label><br>
       <input type="number" min="1990" max="2021" data-js="ano" name="ano" value=""><br>
-      <label for="placa">Placa do Carro</label><br>
+      <label for="placa" pattern="/\w{3}\-\d{5}/">Placa do Carro</label><br>
       <input type="text" data-js="placa" name="placa" value=""><br>
       <label for="corcarro">Cor do carro</label><br>
       <input type="color" data-js="corcarro" value="">
@@ -34,7 +34,7 @@
           <td>Url do carro</td>
           <td>Marca do Carro</td>
           <td>Ano do Carro</td>
-          <td>Marca do Carro</td>
+          <td>Placa do Carro</td>
           <td>Cor do carro</td>
         </tr>
       </thead>

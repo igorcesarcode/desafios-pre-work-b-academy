@@ -1,16 +1,28 @@
 import './style.css'
 import './cars.js'
 
-const url ='http://localhost:3333/cars'
+const url ='http://localhost:3334/cars'
+let cars = [
+  {
+    "image": "imagem1.png",
+    "brandModel": "modelo1",
+    "year": "2022",
+    "plate":"abc-2112",
+    "color":"black"
+  }
+]
 
-let cars =[];
-  fetch(url)
-  .then(result => result.json())
-  .then((result) => console.log(result))
+  async function getCars(){
+  const response = await fetch(url);
+  const data = await response.json();
+  addCars(data)
+}
 
-console.log(cars)
+function addCars(object) {
+ cars = [...cars, ...object]
+}
 
-function setCars(){
+function setCarsPost(url,marca,ano,placa,cor){
 
   fetch(url,{
     method: 'POST',
@@ -18,11 +30,11 @@ function setCars(){
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      image: 'imagem2.png',
-      brandModel: 'lamborgini',
-      year: 2021,
-      plate: 'abc-1234',
-      color: 'red',
+      image: url,
+      brandModel: marca,
+      year: ano,
+      plate: placa,
+      color: cor,
     })
 
   })
@@ -35,3 +47,7 @@ function setCars(){
 
 
 }
+
+
+export const carros = cars;
+
